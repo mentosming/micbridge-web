@@ -40,9 +40,9 @@ export default function Download({ t }: { t: (typeof COPY)["en"] }) {
             </div>
             <p className="mt-3 text-[15px] leading-relaxed text-ink/60">{t.macCard.desc}</p>
             <div className="mt-6">
-              <a className="dl-primary" href={DOWNLOADS.mac}>
-                <DownloadIcon className="h-4 w-4" /> {t.macCard.cta}
-              </a>
+              <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-full bg-ink/[0.06] px-5 py-3 text-sm font-medium text-ink/45">
+                <AppleIcon className="h-4 w-4" /> {t.macCard.cta}
+              </span>
             </div>
             <p className="mt-4 text-xs leading-relaxed text-ink/40">{t.macCard.hint}</p>
           </div>
