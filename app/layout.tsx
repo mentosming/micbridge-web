@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://micbridge.vercel.app"),
+  metadataBase: new URL("https://micbridge-web.vercel.app"),
   title: "MicBridge — Speak on iPhone, type into your Mac / Windows",
   description:
     "Dictate on your iPhone and the text is typed into the focused app on your Mac or Windows PC. Two-way encrypted file transfer. On-device, no cloud, no account.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "MicBridge — Speak on iPhone, type into your Mac / Windows",
     description:
       "iPhone on-device voice → keystrokes into your computer, plus two-way encrypted file transfer. No cloud, no account.",
-    url: "https://micbridge.vercel.app",
+    url: "https://micbridge-web.vercel.app",
     siteName: "MicBridge",
     type: "website",
   },

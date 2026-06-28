@@ -4,7 +4,7 @@ Marketing / intro website for **MicBridge**: speak on your iPhone and the text i
 into the focused app on your **Mac or Windows** PC, plus two-way end-to-end encrypted
 file transfer. On-device, no cloud, no account.
 
-- **Live:** https://micbridge.vercel.app
+- **Live:** https://micbridge-web.vercel.app
 - **Downloads:** GitHub Releases (Windows zips; Apple-notarized macOS .dmg)
 
 ## Stack
