@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f9fc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 75% -10%, rgba(30, 122, 255, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 10%, rgba(10, 107, 244, 0.06), transparent 55%),
+    var(--bg);
+  color: #0b1120;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle fixed grain so flat areas don't read as "AI gradient slop". */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.brand-gradient {
+  background: linear-gradient(180deg, #1e7aff 0%, #0a6bf4 100%);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.reveal {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none; }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Card hairline that tints to the brand on hover. */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 17, 32, 0.06);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 20px 40px -28px rgba(10, 30, 80, 0.18);
+}
+
+@layer components {
+  .dl-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-brand to-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-soft transition active:translate-y-px;
+  }
+  .dl-primary:hover {
+    @apply brightness-105;
+  }
+  .dl-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-ink/10 bg-white/60 px-5 py-2.5 text-sm font-medium text-ink/80 transition hover:border-brand/30 hover:text-ink active:translate-y-px;
+  }
+}
