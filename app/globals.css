@@ -76,4 +76,16 @@ body {
   .dl-ghost {
     @apply inline-flex items-center justify-center rounded-full border border-ink/10 bg-white/60 px-5 py-2.5 text-sm font-medium text-ink/80 transition hover:border-brand/30 hover:text-ink active:translate-y-px;
   }
+  .prose-content h2 {
+    @apply text-lg font-semibold text-ink;
+  }
+  .prose-content a {
+    @apply text-brand-600 underline underline-offset-2;
+  }
+  .prose-content ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  .prose-content section > p + p {
+    @apply mt-1 text-ink/55;
+  }
 }
